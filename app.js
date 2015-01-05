@@ -14,6 +14,10 @@ var fb = $firebase(ref);
 //use this funciton to set the default data
 // on html use ng-click="reset()" to execute the code below when clicked
 
+// syncs object to be returned in json format
+var syncObject = fb.$asObject();
+
+syncObject.$bindTo($scope, 'days')
 
 $scope.reset = function(){
 
